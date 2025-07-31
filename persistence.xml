@@ -1,0 +1,28 @@
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
+             version="3.0">
+    <persistence-unit name="myPU" transaction-type="JTA">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>com.myapp.ms.newproductapihelidon3.domain.Product</class>
+        <properties>
+
+
+
+<!--            <property name="hibernate.hikari.dataSourceClassName"-->
+<!--                      value="org.postgresql.ds.PGSimpleDataSource"/>-->
+<!--            <property name="hibernate.hikari.dataSource.url"-->
+<!--                      value="jdbc:postgresql://localhost:5432/kafka_demo"/>-->
+<!--            <property name="hibernate.hikari.dataSource.user" value="kafka"/>-->
+<!--            <property name="hibernate.hikari.dataSource.password" value="kafka"/>-->
+
+<!--            <property name="hibernate.hikari.maximumPoolSize" value="10"/>-->
+<!--            <property name="hibernate.hikari.minimumIdle" value="2"/>-->
+<!--            <property name="hibernate.hikari.idleTimeout" value="60000"/>-->
+
+<!--            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>-->
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.show_sql" value="true"/>
+        </properties>
+    </persistence-unit>
+</persistence>
